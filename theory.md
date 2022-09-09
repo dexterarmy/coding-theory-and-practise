@@ -46,4 +46,21 @@ but both of them points to the same address in heap so to the same object
 
 ## Scope chain -.
 
--- now we will know how JavaScript Engine Performs Variable Lookups
+1. now we will know how JavaScript Engine Performs Variable Lookups
+2. scope -> accessibility or visibility of variables
+3. Using scope, we can avoid unintended modifications to the variables from other parts of the program
+4. we can use the same variable names in different scopes.
+5. block scope -> they can be scoped to the nearest pair of `curly braces.` That means, they `can’t be accessed from outside that pair of curly braces`
+6. a scope can be nested inside another scope
+7. `lexical scope` -> static scope, scope is determined at lexing time(compilation time) rather than at runtime
+8. Using lexical scope we can determine the scope of the variable just by looking at the source code. Whereas in the case of dynamic scoping the scope can’t be determined until the code is executed
+9. lang which supports static scope -> javascript, c, c++, java etc
+10. when a variable is used engine go up the scope chain until it finds the variable
+11. If it’s still could not find the variable, it will either implicitly declare the variable in the global scope (if not in strict mode) or return an error
+12. `lexical environemnt` -> A lexical environment is a structure that holds identifier-variable mapping. (here identifier refers to the name of variables/functions, and the variable is the reference to actual object [including function object and array object] or primitive value)
+13. lexical environment is a place where variables and references to the objects are stored.
+14. lexical environment is a place where variables are stored during the program execution
+15. new lexical environment is created for each lexical scope but only when the code in that scope is executed. The lexical environment also has a reference to its outer lexical environment ( i.e outer scope)
+16. JavaScript engine uses the lexical environment to determine scope and scope chain
+17. A new lexical environment is created only for let and const declarations, not var declarations. var declarations are added to the current lexical environment (global or function lexical environment)
+    `read further:` https://blog.bitsrc.io/understanding-scope-and-scope-chain-in-javascript-f6637978cf53
