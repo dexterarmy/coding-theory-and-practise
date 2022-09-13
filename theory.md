@@ -64,3 +64,17 @@ but both of them points to the same address in heap so to the same object
 16. JavaScript engine uses the lexical environment to determine scope and scope chain
 17. A new lexical environment is created only for let and const declarations, not var declarations. var declarations are added to the current lexical environment (global or function lexical environment)
     `read further:` https://blog.bitsrc.io/understanding-scope-and-scope-chain-in-javascript-f6637978cf53
+
+## CLOSURES ->
+
+1. functions in JavaScript form closures, closures are created everytime a func is created at func creation time
+2. closure is the combination of a function and the lexical environment within which that function was declared
+3. thanks to javascript lexical scoping many closures(func) can share same lexical environment
+4. changes to the variable value in one closure don't affect the value in the other closure
+5. closures can provides us benefits like data hiding and encapsulation which are normally associated with OOPs
+6. each closure references a diff version of lexical environment through its own closure
+7. closures is the combination of func bundled together with reference to its lexical env
+8. closures has three scopes -> local, enclosed(chain of func scope), global
+9. closures have access to all outer function scopes.
+10. Closures can capture variables in `block scopes `and `module `scopes as well
+11. Closures can close over `imported values` as well, which are regarded as `live bindings`, because when the original value changes, the imported one changes accordingly
