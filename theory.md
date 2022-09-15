@@ -78,3 +78,5 @@ but both of them points to the same address in heap so to the same object
 9. closures have access to all outer function scopes.
 10. Closures can capture variables in `block scopes `and `module `scopes as well
 11. Closures can close over `imported values` as well, which are regarded as `live bindings`, because when the original value changes, the imported one changes accordingly
+12. with let and const, closures binds also the blocked scoped variable
+13. each function instance manages its own scope and closure. Therefore, it is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task eg: object/class methods(use prototype inheritance)
