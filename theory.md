@@ -80,3 +80,31 @@ but both of them points to the same address in heap so to the same object
 11. Closures can close over `imported values` as well, which are regarded as `live bindings`, because when the original value changes, the imported one changes accordingly
 12. with let and const, closures binds also the blocked scoped variable
 13. each function instance manages its own scope and closure. Therefore, it is unwise to unnecessarily create functions within other functions if closures are not needed for a particular task eg: object/class methods(use prototype inheritance)
+
+## new Keyword ->
+
+1. When a function is called with the new keyword, the function will be used as a constructor
+2. when a func is called with new, new creates an object
+3. points new object [[prototype]] to constructor function's prototype property
+4. this in the constructor function now refer to new object
+5. A function can know whether it is invoked with new by checking new.target
+6. Array(), Error(), and Function() behave the same when called as a function or a constructor.
+7. Boolean(), Number(), and String() coerce their argument to the respective primitive type when called, and return wrapper objects when constructed
+8. Symbol() and BigInt() can only be called without new
+9. Proxy and Map can only be constructed with new
+10. Date() returns a string representing the current date when called, same as new Date().toString()
+
+## **proto** vs [[prototype]] ->
+
+1. **proto** is an internal property of an object, pointing to its prototype
+2. All the object constructors (function) have prototype properties
+3. All the objects have proto property.
+4. proto is used in the lookup chain to resolve methods, constructors, etc.
+5. prototype -> It is the property of the class.
+6. proto -> It is the property of the instance of that class.
+7. Object.getPrototypeOf() method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object , same as proto
+
+## Instance of ->
+
+1. `Instanceof operator` -> tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object
+   eg: auto instanceof Car
