@@ -108,3 +108,27 @@ but both of them points to the same address in heap so to the same object
 
 1. `Instanceof operator` -> tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object
    eg: auto instanceof Car
+
+## DOUBTS ->
+
+1. company's internal software repository with url accessible from office network ?
+2. repo server ?
+3. file based name resolution ?
+4. DNS PROBE FINISHED NX DOMAIN -> not able to locate ip address of a name
+5. part of the network and assigned with ip ?
+6. `host A does not care what is the real hostname of system B`
+7. ssh, curl, nslookup,dig?
+8. DNS server ?
+9. `resolv.conf file , entry for public nameserver that knows all the sites on internet.`
+10. 8.8.8.8 nameserver available on internet hosted by google ?
+11. .net ?
+12. subdomains are the services provided by the domains ?
+13. dot is the root where everything starts ?
+14. `local DNS server -- root DNS server ponts to DNS server serving .com and so on`
+15. `www. for external facing website, and subdomains for each purpose`
+16. mail.mycompany.com ?
+17. someone from the outside wants to access our web server ?
+18. `search in resolv.conf , to append the domain name while resolving dns name`
+19. CNAME ??
+20. `nslookup directly from DNS server`
+21. `dig also resolves DNS name directly from DNS server`
