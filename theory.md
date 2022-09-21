@@ -109,7 +109,7 @@ but both of them points to the same address in heap so to the same object
 1. `Instanceof operator` -> tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object
    eg: auto instanceof Car
 
-## DOUBTS ->
+## DOUBTS (networking, linux)->
 
 1. company's internal software repository with url accessible from office network ?
 2. repo server ?
@@ -118,17 +118,20 @@ but both of them points to the same address in heap so to the same object
 5. part of the network and assigned with ip ?
 6. `host A does not care what is the real hostname of system B`
 7. ssh, curl, nslookup,dig?
-8. DNS server ?
-9. `resolv.conf file , entry for public nameserver that knows all the sites on internet.`
-10. 8.8.8.8 nameserver available on internet hosted by google ?
-11. .net ?
-12. subdomains are the services provided by the domains ?
-13. dot is the root where everything starts ?
-14. `local DNS server -- root DNS server ponts to DNS server serving .com and so on`
-15. `www. for external facing website, and subdomains for each purpose`
-16. mail.mycompany.com ?
-17. someone from the outside wants to access our web server ?
-18. `search in resolv.conf , to append the domain name while resolving dns name`
-19. CNAME ??
-20. `nslookup directly from DNS server`
-21. `dig also resolves DNS name directly from DNS server`
+8. `resolv.conf file , entry for public nameserver that knows all the sites on internet.`
+9. 8.8.8.8 nameserver available on internet hosted by google ?
+10. .net ?
+11. subdomains are the services provided by the domains ?
+12. dot is the root where everything starts ?
+13. `local DNS server -- root DNS server ponts to DNS server serving .com and so on`
+14. `www. for external facing website, and subdomains for each purpose`
+15. mail.mycompany.com ?
+16. someone from the outside wants to access our web server ?
+17. `search in resolv.conf , to append the domain name while resolving dns name`
+18. CNAME ??
+19. `nslookup directly from DNS server`
+20. `dig also resolves DNS name directly from DNS server`
+21. password to write in a file in another system ??
+22. `search domain in resolv.conf`
+23. apache server connect, telnet apache 80, not able to... so we ping then we got lack priviledge for raw socket, then we did ssh apache with our password, so we went to apache's system, `so sudo ip link set dev eth0 up` ??
+24. `sudo ip route add default via 172.16.238.10`
