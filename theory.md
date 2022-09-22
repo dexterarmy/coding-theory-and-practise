@@ -114,7 +114,7 @@ but both of them points to the same address in heap so to the same object
 1. company's internal software repository with url accessible from office network ?
 2. repo server ?
 3. file based name resolution ?
-4. DNS PROBE FINISHED NX DOMAIN -> not able to locate ip address of a name
+4. DNS PROBE FINISHED NX DOMAIN error-> not able to locate ip address of a name
 5. part of the network and assigned with ip ?
 6. `host A does not care what is the real hostname of system B`
 7. ssh, curl, nslookup,dig?
@@ -145,5 +145,8 @@ but both of them points to the same address in heap so to the same object
 32. connecting to other network's system ?? (we can go to that system with ssh <servername>) if we know its password, we will do this in our network too ??? )
 33. `different system connected to a router, and we have made one system as a web server, so we can connect to that system with router as gateway, if its interface is up and many more things`
 34. `ip r add default via 172.16.238.10` -> added default route via eth0 gateway on the server
-35. to troubleshoot an issue with the route we use `traceroute` command -> show us the no. of hops or devices between source and the repo server in our case
-36. `netstat command`, netstat -an | grep 80 | grep -i LISTEN
+35. to troubleshoot an issue with the route we use `traceroute` command -> show us the no. of hops or devices between source and the repo server in our case, shows us devices like routers, sytem in our route between source and destination
+36. `netstat command`, netstat -an | grep 80 | grep -i LISTEN, check if http process is running on port 80
+37. connection timeout error -> issue with interface, route, ip resolve, DNS server issue, server itself has connectivity issues, software that hosts the service is not functioning (network troubleshooting)
+38. ping to check if the response is coming from remote server
+39. screen sharing session ??
