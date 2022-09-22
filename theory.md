@@ -135,3 +135,15 @@ but both of them points to the same address in heap so to the same object
 22. `search domain in resolv.conf`
 23. apache server connect, telnet apache 80, not able to... so we ping then we got lack priviledge for raw socket, then we did ssh apache with our password, so we went to apache's system, `so sudo ip link set dev eth0 up` ??
 24. `sudo ip route add default via 172.16.238.10`
+25. `gateway/routes through router`
+26. 0.0.0.0 -> any ip destination
+27. 0.0.0.0 -> in gateway means we don't need a gateway(when in own network so don't neet router/gateway)
+28. default gateway is the path used to pass information when the device doesn't know where the destination is
+29. routing table -> command `route`
+30. `ip addr add` -> to set ip addresses on the interface
+31. `/etc/network/interfaces` -> to persist changes made with commands like ip addrs add etc
+32. connecting to other network's system ?? (we can go to that system with ssh <servername>) if we know its password, we will do this in our network too ??? )
+33. `different system connected to a router, and we have made one system as a web server, so we can connect to that system with router as gateway, if its interface is up and many more things`
+34. `ip r add default via 172.16.238.10` -> added default route via eth0 gateway on the server
+35. to troubleshoot an issue with the route we use `traceroute` command -> show us the no. of hops or devices between source and the repo server in our case
+36. `netstat command`, netstat -an | grep 80 | grep -i LISTEN
