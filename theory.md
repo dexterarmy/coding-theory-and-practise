@@ -150,3 +150,37 @@ but both of them points to the same address in heap so to the same object
 37. connection timeout error -> issue with interface, route, ip resolve, DNS server issue, server itself has connectivity issues, software that hosts the service is not functioning (network troubleshooting)
 38. ping to check if the response is coming from remote server
 39. screen sharing session ??
+40. assuming the folder in which the web server started it gave all the files in that folder
+
+## Security and file permissions ->
+
+1. group users on the same system
+2. system accounts created during OS installation, for software and services that are not super user
+3. sshd -> provides encrypted communications between two untrusted hosts over an insecure network, listens at port 22
+4. system accounts vs service accounts ???
+5. `sudo su -`, `su -l username`, `sudo su -c "whoami"`
+6. in Ubuntu, by default, root has no password. Without arguments, su means "switch user to root" and to do that you have to enter root's password, not your own. Unless you give root a password, it doesn't have one, so you can't literally log in as root. That is why use of `su` is not recommended and `sudo` is recommended because it requires your own passwd
+7. sudo to give users administrative access
+8. chsh -> to change user's shell
+9. how it is secure if anyone can edit sudoers file ??
+10. sudoers file, prevents other users from running commands as root user ???
+11. admin can give granular level access with sudo
+12. `access control files`
+
+## this ->
+
+1. runtime binding, it can't be set by assignment during execution
+2. All non-static methods within the class are added to the prototype of this
+3. Derived classes must not return before calling super(), unless they return an Object or have no constructor at all.
+4. in non–strict mode, with call and apply, if the value passed as this is not an object, an attempt will be made to convert it to an object
+5. Object.prototype.toString.call(34) `????`
+6. Calling f.bind(someObject) creates a new function with the same body and scope as f. `bind only works once`
+7. arrow func -> this as first arg in call,apply,bind will be ignored, so put first arg as null
+8. arro func -> this remains that of the enclosing lexical context.
+9. this binding is only affected by the most immediate member reference
+10. method is on object's prototype chain, this refers to object the method was called on, as if the method were on the object
+11. `Object.create()` creates a new object, using an existing object as the prototype of the newly created object.
+12. A function used as getter or setter has its this bound to the object from which the property is being set or gotten.
+13. if returned object from constructor, then `this object` is dead
+14. in DOM event handlers, `outer code` has this set to element event is attached to not `inner code(if in function)`
+15. `can also bind the class methods in the constructor`, so that in other constructor also this will point to previous class instance.
