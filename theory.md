@@ -184,3 +184,10 @@ but both of them points to the same address in heap so to the same object
 13. if returned object from constructor, then `this object` is dead
 14. in DOM event handlers, `outer code` has this set to element event is attached to not `inner code(if in function)`
 15. `can also bind the class methods in the constructor`, so that in other constructor also this will point to previous class instance.
+
+## OOPs ->
+
+1. `abstraction` -> Objects in an OOP language provide an abstraction that hides the internal implementation details
+2. `encapsulation` -> refers to the bundling of data with the methods that operate on that data, or the restricting of direct access to some of an object's components
+3. `inheritance` -> child class will inherit all the public and protected properties and methods from the parent class
+4. `polymorphism` -> representing one form in multiple forms
