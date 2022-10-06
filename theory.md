@@ -191,3 +191,18 @@ but both of them points to the same address in heap so to the same object
 2. `encapsulation` -> refers to the bundling of data with the methods that operate on that data, or the restricting of direct access to some of an object's components
 3. `inheritance` -> child class will inherit all the public and protected properties and methods from the parent class
 4. `polymorphism` -> representing one form in multiple forms
+
+## Luhn's Algorithm ->
+
+1. use to validate credit card numbers, IMEI numbers
+2. Starting from the rightmost digit, double the value of every second digit
+3. if doubling results in two digits number, add the digits
+4. now take sum of all the digits
+5. if the sum is divisible by 10 then it is a valid number
+
+## MongoDB aggregation pipeline ->
+
+-- with this we can find users who have their birthdays on specific dates with :`$expr, $eq, $and, $dayOfMonth, $month`
+-- return birthdays of current month : `$match stage, $expr, $eq, $month`
+-- return birthdays of current week : first we will convert all the birthdates to current year with project stage and using `$dateFromParts with $year, $month and $dayOfMonth`. Then we will have match stage to match for current week with : `$expr, $eq, $week`
+`read more` -> https://medium.com/@luansantos_4481/how-to-return-birthdays-of-the-current-day-week-and-month-with-mongodb-aggregation-f4104fe82e3c
