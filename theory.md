@@ -202,7 +202,7 @@ but both of them points to the same address in heap so to the same object
 
 ## MongoDB aggregation pipeline ->
 
--- with this we can find users who have their birthdays on specific dates with :`$expr, $eq, $and, $dayOfMonth, $month`
--- return birthdays of current month : `$match stage, $expr, $eq, $month`
--- return birthdays of current week : first we will convert all the birthdates to current year with project stage and using `$dateFromParts with $year, $month and $dayOfMonth`. Then we will have match stage to match for current week with : `$expr, $eq, $week`
-`read more` -> https://medium.com/@luansantos_4481/how-to-return-birthdays-of-the-current-day-week-and-month-with-mongodb-aggregation-f4104fe82e3c
+1. with this we can find users who have their birthdays on specific dates with :`$expr, $eq, $and, $dayOfMonth, $month`
+2. return birthdays of current month : `$match stage, $expr, $eq, $month`
+3. return birthdays of current week : first we will convert all the birthdates to current year with project stage and using `$dateFromParts with $year, $month and $dayOfMonth`. Then we will have match stage to match for current week with : `$expr, $eq, $week`
+4. `read more` -> https://medium.com/@luansantos_4481/how-to-return-birthdays-of-the-current-day-week-and-month-with-mongodb-aggregation-f4104fe82e3c
