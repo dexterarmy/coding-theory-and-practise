@@ -237,4 +237,25 @@ but both of them points to the same address in heap so to the same object
     26. createRoot() -> create a react root for supplied container and return the root, root renders a react element to the DOM . root can also be unmounted with root.unmount(). Controles the content of container node you passed in. ANy existing DOM elements inside are replaced when render is called.  Later calls use React’s DOM diffing algorithm for efficient updates.Does not modify the container node, modifies the children of container. It may be possible to insert a component to an existing DOM node without overwriting the existing children. Using createRoot() to hydrate a server-rendered container is not supported. Use hydrateRoot() instead
     
     
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
