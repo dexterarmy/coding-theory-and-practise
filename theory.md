@@ -206,3 +206,35 @@ but both of them points to the same address in heap so to the same object
 2. return birthdays of current month : `$match stage, $expr, $eq, $month`
 3. return birthdays of current week : first we will convert all the birthdates to current year with project stage and using `$dateFromParts with $year, $month and $dayOfMonth`. Then we will have match stage to match for current week with : `$expr, $eq, $week`
 4. `read more` -> https://medium.com/@luansantos_4481/how-to-return-birthdays-of-the-current-day-week-and-month-with-mongodb-aggregation-f4104fe82e3c
+    
+## ReactJS -> 
+    
+    1. JSX -> html with javascript , syntax extension in javascript, convert JSX to javascript object with babel for browser to understand
+    2. Components -> reusable with their own logic and control, stateless, stateful, dereive data as props, return jsx onscreen
+    3. virtual DOM -> represent real DOM in memory, changes only changed object state, compares previous state, performance
+    4. one way data flow -> child in parent, modular and fast, easy debug react app(chrome extension by facebook)
+    5. react only updates those componets that have changed
+    6. react has more functionality , with JS code becomes more complex
+    7. ES5 -> var app = React.createClass({render: function()}), require(), ES6 -> class app extends Component{render()}
+    8. camel case react events in JSX, pass function name as event handler not string 
+    9. synthetic events -> combine response of different browser native envents in common APIm so that events are uniform in diff browsers(e.preventDefault). App runs regardless of browsers
+    10. list -> key, which item changed then update that only, updated components are re-rendered 
+    11. form -> interact with app, alert the user when the submit button is pressed, pass event to parent 
+    12. regular func as event handler -> this.handle.bind(this), arrow -> (e) => this.handle(e)
+    13. no html, css in react native 
+    14. angular -> complete MVC,real DOM, bi-directional, react -> view layer of MVC 
+    15. render() -> return html displayed in component, each component shoul have render()
+    16. state -> react object, data about component, component re-renders, behaviour of component
+    17. props -> react object, stores value of attribute of tags, passed from one component to another, like data is passed in functions, this.props or props object
+    18. container ->higher order component, multiple components using same logic, makes components simple and reusable
+    19. embed components in another -> props.children
+    20. class -> lifecycle hooks, mounting updating and unmounting, componentDidMount(),  componentWillUnmount()
+    21. func -> no lifecycle hooks, easy to understand, not complex, now can be resused
+    22. redux -> predictable state container, store, action -> source info for store, reducer -> how state will change in response to actions sent to store, state is immutable, so when redux state changes new copy of state creates and values are set, single store, concept of reducer
+    23. flux -> action - dispatcher - store - view, triggering certain actions is the only way to update data(one way data). When dispatch triggered and store updates it emits change event that views can re-render, state is mutable, multiple store, concept of dispatcher
+    24. ReactRouter -> react-router-dom package, create routes inr react app, for single page web apps, maintains consistent structures, enable multiple views in single app by defining multiple routes in react app, single html page, user navigates multiple views in same file, page will not referesh since it is a single file, improved performance, <BrowserRouter/>, <Routes/>, <Route/> (these three comping from react-router-dom)
+    25. inline style with style: {{}}, or object in style: {}, css file to be imported in modules
+    26. createRoot() -> create a react root for supplied container and return the root, root renders a react element to the DOM . root can also be unmounted with root.unmount(). Controles the content of container node you passed in. ANy existing DOM elements inside are replaced when render is called.  Later calls use React’s DOM diffing algorithm for efficient updates.Does not modify the container node, modifies the children of container. It may be possible to insert a component to an existing DOM node without overwriting the existing children. Using createRoot() to hydrate a server-rendered container is not supported. Use hydrateRoot() instead
+    
+    
+    
