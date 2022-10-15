@@ -237,15 +237,19 @@ but both of them points to the same address in heap so to the same object
     26. createRoot() -> create a react root for supplied container and return the root, root renders a react element to the DOM . root can also be unmounted with root.unmount(). Controles the content of container node you passed in. ANy existing DOM elements inside are replaced when render is called.  Later calls use React’s DOM diffing algorithm for efficient updates.Does not modify the container node, modifies the children of container. It may be possible to insert a component to an existing DOM node without overwriting the existing children. Using createRoot() to hydrate a server-rendered container is not supported. Use hydrateRoot() instead
     
     
-
-    
-    
-    
-    
-    
-    
-    
-    
+## Nodejs -> 
+    1. cross-platform javascript runtime env, async, event driven, non-blocking I/O, scalable, concurrency
+    2. app we can make like -> video streaming app, network app, realtime app, Iot, microservice architecture
+    3. req to server - event loop - simple req(event loop) and return response - thread pool(complex request) accesses external resource - event loop send response to client 
+    4. nodejs is single threaded for async processsing, can handle more concurrent client req, event loop is processing model's heart in nodejs
+    5. control flow of async logic is bettr with promises than callbacks
+    6. I/O -> data transfer is output from one medium and input to another, medium can be network, files system etc
+    7. NPM -> online repository package/module for nodejs, command line client(npm) for nodejs packages and manages nodejs versions and dependencies
+    8. moduels like -> http server, stream, util, url, fs, so modules can be used in nodejs applications
+    9. mongoDB -> cross platform, express- > framework fro restful apis with nodejs, mongoose -> oops based library that creates connection between nodejs and mongoDB 
+    10. pros: streaming data, intensive I/O operation, fast processing, CONS -> no heavy computation, single threaded so no cpu intensive, relational database not good for nodejs
+    11. event based -> event triggers various functions
+    12. event loop -> handles async callbacks, 
     
     
     
