@@ -250,7 +250,8 @@ but both of them points to the same address in heap so to the same object
     10. pros: streaming data, intensive I/O operation, fast processing, CONS -> no heavy computation, single threaded so no cpu intensive, relational database not good for nodejs
     11. event based -> event triggers various functions
     12. event loop -> handles async callbacks, 
-    
+    13. nodejs process starts, then callbacks and handlers are added to their respective queues like timer callback in timer queue, promises and next tick in microtask queue, i/o operation in I/O poll queue, setImmediate in check phase immediate queue etc. Then event loop starts checking. Starts with microtask queue. THen event loop moves to timers phase, if no more timers then loop moves to I/O and if no pending I/O then loop moves to setImmediate. 
+    14. event loop blocks and wait in poll phase when appropriate, if no other callback is there then event loop will wait in I/O phase and wait for callbacks to be added to the queue and execute them.
     
     
     
