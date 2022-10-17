@@ -252,6 +252,21 @@ but both of them points to the same address in heap so to the same object
     12. event loop -> handles async callbacks, 
     13. nodejs process starts, then callbacks and handlers are added to their respective queues like timer callback in timer queue, promises and next tick in microtask queue, i/o operation in I/O poll queue, setImmediate in check phase immediate queue etc. Then event loop starts checking. Starts with microtask queue. THen event loop moves to timers phase, if no more timers then loop moves to I/O and if no pending I/O then loop moves to setImmediate. 
     14. event loop blocks and wait in poll phase when appropriate, if no other callback is there then event loop will wait in I/O phase and wait for callbacks to be added to the queue and execute them.
+    15. event loop explains the async process and non blocking I/O nature of nodejs.
+    16. Nodejs starts - intitialises event loop - processes input script(or REPL) which perform async APIcall timer process.nextTIck() - starts processing event loop
+    17. event loop performs operations relevant to that phase before executing callbacks in the phase queue, timers - pending(I/o callbacks delayed until next loop iteration) - idle, prepare - poll(I/O events, all except close timer setImmediate, node blocks here when required) - check(immediate) - close(like socket.on('close'), process.on('exit'))
+   18. As Node.js starts executing your index.js file, or some other application entry point, the `Event Loop begins`    
+   19. 6 phase -> tick or cycle or loop, when no pending work in event loop nodejs process exits. Program only runs as long as task are queued in event loop or call stack 
+   20. poll phase ->non-blocking I/O request callbacks are executed,  run our JS code we wrote, top to bottom, can execute immediately or pass to queue for future tick of event loop
+   21. When event loop is in poll phase of iteration it will execute whole code, poll phase figures our how long it should block and poll for I/O then process events in poll queue
+   22. so if no timers scheduled when event loop reaches poll phase it will wait there, so if poll queue is empty it blocks and waits for any inflight I/O operations to finish before executing their callback
+   23. microtasks are executed immediately if they are scheduled during poll phase rather than waiting for poll phase to complete. Microtask run after main line and at the end of each phase of event loop
+    24. poll phase becomes idle when queue of poll phase is empty, poll phase waits for any pending I/O requests to finish
+    25. 
+    
+    
+    
+
     
     
     
