@@ -267,16 +267,22 @@ but both of them points to the same address in heap so to the same object
     27. long polling in nodejs can be configured on client side, during downtime or when making new request to server the client generates event loop
     28. in long polling server only sends data when available after sending browser can submit new request almost immediately
     
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+## MongoDB -> 
+    1. not only SQL, document oriented database
+    2. BSON structure base documents
+    3. flexible scalable doc structure, for unstrucutred messy complicated data, high speed logging
+    4. faster in comparison to SQL database, indexing and storage techniques, one doc can have 6 columns and other 12
+    5. 16mb doc limit
+    6. profiler -> shows each operations performance char. against database, we can analyse query. This can be used in determining when an index is called for
+    7. namespace -> combination of database name and collection or index name
+    8. sharding -> storing data on multiple machines, this is how mongoDB deals with issue of inc data growth demands. Data storage involves horz partitioning of data is search engine or database, each partition is known as shard / database shard
+    9. removing a doc from database results it being removed from the disk as well
+    10. replication: synchronising data across multiple servers. This process increases data availability, protects data from loss of single server, allows faster recovery from service interruption and hardware failure, but offeres redundancy
+    11. objectId -> timestamp, client machine ID, client process ID, 3byte incremented counter
+    12. MongoDB does not require a relational database management system (RDBMS), it provides flexible data storage
+    13. Partition Tolerance is a guarantee that the system continues to operate despite arbitrary message loss or failure of part of the system
+    14. mysql vs mongodb -> table = connection (records of similar type for both), mongoDB -> high available and scalable replication sharding, sql -> no efficient replication and sharding but one can access associated data using JOIN which minimizes duplication
+    15. DRAWBACKS -> no transacitons(atomicity of reads and writes to multiple documents (in a single or multiple collections), MongoDB supports multi-document transactions, distributed transactions, transactions can be used across multiple operations, collections, databases, documents, and shards), finding what to index and composite index is hard, no JOIN, duplication , may be slow speeed
+    16 RDBMS -> type of database that stores and provides access to data points that are related to one another, relational mode, strict schema, schema cannot be changed, the inputs following the given schema are only entered that is why structured query lang
     
     
