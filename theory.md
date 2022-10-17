@@ -262,9 +262,10 @@ but both of them points to the same address in heap so to the same object
    22. so if no timers scheduled when event loop reaches poll phase it will wait there, so if poll queue is empty it blocks and waits for any inflight I/O operations to finish before executing their callback
    23. microtasks are executed immediately if they are scheduled during poll phase rather than waiting for poll phase to complete. Microtask run after main line and at the end of each phase of event loop
     24. poll phase becomes idle when queue of poll phase is empty, poll phase waits for any pending I/O requests to finish
-    25. 
-    
-    
+    25. without protocols like webSocket and server-side events, long-polling is an efficient way to handle connection with server. Nodejs uses long polling. LOng polling works on top of client-server model. Server only sends client response when data is available till that time link remains open. Long polling(study more) ????
+    26. regulr polling(periodic polling) -> when data unavailable whole process fails but every request is sent to server and recieves null responses
+    27. long polling in nodejs can be configured on client side, during downtime or when making new request to server the client generates event loop
+    28. in long polling server only sends data when available after sending browser can submit new request almost immediately
     
 
     
