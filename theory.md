@@ -238,7 +238,7 @@ but both of them points to the same address in heap so to the same object
     
     
 ## Nodejs -> 
-    1. cross-platform javascript runtime env, async, event driven, non-blocking I/O, scalable, concurrency
+   ` 1. cross-platform javascript runtime env, async, event driven, non-blocking I/O, scalable, concurrency
     2. app we can make like -> video streaming app, network app, realtime app, Iot, microservice architecture
     3. req to server - event loop - simple req(event loop) and return response - thread pool(complex request) accesses external resource - event loop send response to client 
     4. nodejs is single threaded for async processsing, can handle more concurrent client req, event loop is processing model's heart in nodejs
@@ -265,7 +265,7 @@ but both of them points to the same address in heap so to the same object
     25. without protocols like webSocket and server-side events, long-polling is an efficient way to handle connection with server. Nodejs uses long polling. LOng polling works on top of client-server model. Server only sends client response when data is available till that time link remains open. Long polling(study more) ????
     26. regulr polling(periodic polling) -> when data unavailable whole process fails but every request is sent to server and recieves null responses
     27. long polling in nodejs can be configured on client side, during downtime or when making new request to server the client generates event loop
-    28. in long polling server only sends data when available after sending browser can submit new request almost immediately
+    28. in long polling server only sends data when available after sending browser can submit new request almost immediately`
     
 
     
