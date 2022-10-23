@@ -266,6 +266,25 @@ but both of them points to the same address in heap so to the same object
     26. regulr polling(periodic polling) -> when data unavailable whole process fails but every request is sent to server and recieves null responses
     27. long polling in nodejs can be configured on client side, during downtime or when making new request to server the client generates event loop
     28. in long polling server only sends data when available after sending browser can submit new request almost immediately
+    29. process.nextTick() is run after every operation, operation is transitioning from underlying c/c++ handler and handling javascript that needs to be executed. Setimmediate() after I/O poll phase
+    30. EventEmitter -> class that holds all the objects that can emit events, comes from "events" module in nodeJS
+    31. package.json -> holds metadata for a project
+    32. URL module -> url resolution and parsing, url.parse(like url.search, url.query, url.host)
+    33. express- > flexible framework for nodejs, features to develop web and mobile app | req.headers
+    34. streams -> read or write data continuously, readable, eritable, duplex, tranform(type of duplex whereoutput is computed based on input)
+    35. http module -> http.createServer().listen(), res.writeHead(), res.end()
+    36. nodeJS server does not wait for API to return data, instead it moves to next API. Notification mechanism from nodeJS events responds to server for previous API call
+    37. await makes JS engine running the code wait, callback -> func called after given task
+    38. REPL -> like linux shell, comppand is input then system responds with output, loops the command
+    39. parse -> to tree, syntax too,  compiler -> to machine code
+    40. control flow -> code that runs in between several asynchronous function calls, control order of execution, collect data, limit concurrency, call the next step in program
+    41. spawn vs fork ->
+    42. buffer class -> raw binary data outside v8 heap | r -> reading file, r+ -> reading and writing, exception occurs if file is not there, w+ -> reading and writing, file is created if not exist or truncated if exist
+    43. piping -> connect output of one stream to other stream, it is used to retrieve data from one stream and pass output to another stream
+    44. reactor pattern -> non blocking I/O operation, provides handler that is associated with I/O operations. When i/o request is generated it is submitted to demultiplexer(by libuv that allows v8 to perform I/O, network, files etc)
+    45. test pyramid -> proportion of unit test, integration test(test interation amongst dissimilar test),  end to end test
+    46. v8 -> by google , in c++, v8 converts JS code in efficient machine code during execution using just in time compuler
+    47. uncaught exception -> 1 exit code, javascript parse error -> 3 status code, unhandled rejection -> when JS promise does not have rejected promise handler | MongoClient object
     
 ## MongoDB -> 
     1. not only SQL, document oriented database
